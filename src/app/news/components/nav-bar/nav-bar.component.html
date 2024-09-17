@@ -20,13 +20,28 @@
   </div>
   <div class="third-row-container">
     <ul>
-      <li>General</li>
-      <li>Health</li>
-      <li>Science</li>
-      <li>Business</li>
-      <li>Technology</li>
-      <li>Sports</li>
-      <li>Entertainment</li>
+      <li value="general">
+        <a (click)="goToCategory('general')">General</a>
+      </li>
+      <li value="health">
+        <a (click)="goToCategory('health')">Health</a>
+      </li>
+      <li value="science">
+        <a (click)="goToCategory('science')">Science</a>
+      </li>
+      <li value="business">
+        <a (click)="goToCategory('business')">Business</a>
+      </li>
+      <li value="technology">
+        <a (click)="goToCategory('technology')">Technology</a>
+      </li>
+      <li value="sports">
+        <a (click)="goToCategory('sports')">Sports</a>
+      </li>
+      <li value="entertainment">
+        <a (click)="goToCategory('entertainment')">Entertainment</a>
+      </li>
     </ul>
   </div>
+
 </div>
