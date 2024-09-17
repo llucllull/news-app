@@ -6,13 +6,11 @@
 
 <div class="preferences-content">
   <ul>
-    <li>General</li>
-    <li>Health</li>
-    <li>Science</li>
-    <li>Business</li>
-    <li>Technology</li>
-    <li>Sports</li>
-    <li>Entertainment</li>
+    @for(item of preferences; track item) {
+      <li [class.active]="isActive(item)" (click)="togglePreference(item)">
+        {{item}}
+      </li>
+    }
   </ul>
 </div>
 

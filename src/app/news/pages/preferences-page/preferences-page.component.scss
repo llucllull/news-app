@@ -43,6 +43,11 @@
   color: white;
 }
 
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
 @media (max-width: 768px) {
   .preferences-content ul {
     grid-template-columns: repeat(2, 1fr);

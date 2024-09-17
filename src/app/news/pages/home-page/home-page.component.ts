@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {NewsModuleComponent} from "../../components/news-module/news-module.component";
 import {NewsService} from "../../services/news.service";
+import {PreferencesService} from "../../services/preferences.service";
 
 @Component({
   selector: 'app-home-page',
@@ -13,8 +14,9 @@ import {NewsService} from "../../services/news.service";
 export class HomePageComponent implements OnInit{
   firstArticle: any[] = [];
   news: any[] = [];
+  activePreferences: string[] = [];
 
-  constructor(private newsService: NewsService) {}
+  constructor(private newsService: NewsService, private preferencesService: PreferencesService) {}
 
   ngOnInit() {
     this.newsService.getTopHeadlinesNews().subscribe(data => {
@@ -23,5 +25,8 @@ export class HomePageComponent implements OnInit{
     },
     error => console.error('Error fetching news:', error)
     );
+    this.preferencesService.preferences$.subscribe(prefs => {
+      this.activePreferences = prefs;
+    });
   }
 }

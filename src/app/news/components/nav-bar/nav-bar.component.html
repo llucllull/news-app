@@ -1,14 +1,16 @@
 <div class="navbar">
   <div class="first-row-container">
-    <a href="/news/preferences">
-      <p>PREFERENCIAS</p>
-    </a>
+    <div class="preference-button">
+      <a href="/news/preferences">
+        <p class="preferences">PREFERENCIAS</p>
+      </a>
+    </div>
     <div class="auth-buttons">
       <a href="/login">
-        <p>LOGIN</p>
+        <p class="login">LOGIN</p>
       </a>
       <a href="/register">
-        <p>REGISTER</p>
+        <p class="register">REGISTER</p>
       </a>
     </div>
   </div>
@@ -20,27 +22,41 @@
   </div>
   <div class="third-row-container">
     <ul>
-      <li value="general">
-        <a (click)="goToCategory('general')">General</a>
-      </li>
-      <li value="health">
-        <a (click)="goToCategory('health')">Health</a>
-      </li>
-      <li value="science">
-        <a (click)="goToCategory('science')">Science</a>
-      </li>
-      <li value="business">
-        <a (click)="goToCategory('business')">Business</a>
-      </li>
-      <li value="technology">
-        <a (click)="goToCategory('technology')">Technology</a>
-      </li>
-      <li value="sports">
-        <a (click)="goToCategory('sports')">Sports</a>
-      </li>
-      <li value="entertainment">
-        <a (click)="goToCategory('entertainment')">Entertainment</a>
-      </li>
+      @if(isActive('General')){
+        <li value="general">
+          <a (click)="goToCategory('general')">General</a>
+        </li>
+      }
+      @if(isActive('Health')){
+        <li value="health">
+          <a (click)="goToCategory('health')">Health</a>
+        </li>
+      }
+      @if(isActive('Science')){
+        <li value="science">
+          <a (click)="goToCategory('science')">Science</a>
+        </li>
+      }
+      @if(isActive('Business')){
+        <li value="business">
+          <a (click)="goToCategory('business')">Business</a>
+        </li>
+      }
+      @if(isActive('Technology')){
+        <li value="technology">
+          <a (click)="goToCategory('technology')">Technology</a>
+        </li>
+      }
+      @if(isActive('Sports')){
+        <li value="sports">
+          <a (click)="goToCategory('sports')">Sports</a>
+        </li>
+      }
+      @if(isActive('Entertainment')){
+        <li value="entertainment">
+          <a (click)="goToCategory('entertainment')">Entertainment</a>
+        </li>
+      }
     </ul>
   </div>
 
