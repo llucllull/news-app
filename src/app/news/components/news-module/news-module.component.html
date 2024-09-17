@@ -1,0 +1,12 @@
+<div class="news-item-content">
+  @if(newsItem.urlToImage && showImage){
+    <img [src]="newsItem.urlToImage" alt="{{ newsItem.title }}">
+  }
+  <a [href]="newsItem.url" target="_blank">
+    <h2>{{ newsItem.title }}</h2>
+  </a>
+  @if(showDescription){
+    <p>{{ newsItem.description }}</p>
+  }
+  <p>{{ newsItem.publishedAt | date: 'short' }} | {{ newsItem.source.name }}</p>
+</div>

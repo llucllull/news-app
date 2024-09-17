@@ -1,0 +1,15 @@
+@if(news && news.length > 0){
+  <section class="news-grid">
+    <div class="news-item featured">
+      <news-module [newsItem]="firstArticle" [showImage]="true"></news-module>
+    </div>
+
+    @for (item of news; let i = $index; track item){
+      <div class="news-item">
+        <news-module [newsItem]="item" [showImage]="i > 1" [showDescription]="i < 3"/>
+      </div>
+    }
+  </section>
+} @else {
+  <p>No news available</p>
+}

@@ -1,0 +1,28 @@
+
+.news-item-content {
+  padding: 0;
+  overflow: hidden;
+}
+
+.news-item-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0 0 0;
+}
+
+.news-item-content a {
+  text-decoration: none;
+  color: #000;
+}
+
+h2{
+  font-family: 'Portano-Sans', sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+p {
+  font-family: 'Portano-Sans', sans-serif;
+  font-size: 13px;
+}
