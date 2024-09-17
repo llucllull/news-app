@@ -1,0 +1,56 @@
+.title-container h2{
+  font-family: 'Bevan', sans-serif;
+  font-size: 35px;
+  margin: 30px 0 0 0;
+}
+
+.title-container p {
+  font-family: 'Portano-Sans', sans-serif;
+  font-size: 15px;
+}
+
+.title-container hr{
+  margin: 0;
+  padding: 0;
+  border: 1px solid #000;
+}
+
+.preferences-content {
+  font-family: 'Portano-Sans', sans-serif;
+  font-size: 15px;
+}
+
+.preferences-content ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.preferences-content li {
+  border: 2px solid #3d3d3d;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.preferences-content li:hover {
+  background-color: #748cb6;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .preferences-content ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .preferences-content ul {
+    grid-template-columns: 1fr;
+  }
+}
