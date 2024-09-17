@@ -1,0 +1,32 @@
+<div class="navbar">
+  <div class="first-row-container">
+    <a href="/news/preferences">
+      <p>PREFERENCIAS</p>
+    </a>
+    <div class="auth-buttons">
+      <a href="/login">
+        <p>LOGIN</p>
+      </a>
+      <a href="/register">
+        <p>REGISTER</p>
+      </a>
+    </div>
+  </div>
+  <div class="second-row-container">
+    <span class="date-container">{{ currentDate | date:'fullDate' }}</span>
+    <a href="/news" class="title-container">
+      <h3 class="title">The News App</h3>
+    </a>
+  </div>
+  <div class="third-row-container">
+    <ul>
+      <li>General</li>
+      <li>Health</li>
+      <li>Science</li>
+      <li>Business</li>
+      <li>Technology</li>
+      <li>Sports</li>
+      <li>Entertainment</li>
+    </ul>
+  </div>
+</div>
