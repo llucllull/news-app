@@ -13,7 +13,7 @@ export const routes: Routes = [
         loadComponent: () => import('./news/pages/home-page/home-page.component').then(m => m.HomePageComponent)
       },
       {
-        path: 'list',
+        path: 'list/:category',
         title: 'News List',
         loadComponent: () => import('./news/pages/list-page/list-page.component').then(m => m.ListPageComponent)
       },
