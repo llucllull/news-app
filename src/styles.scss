@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ewert&display=swap');
+
+@font-face {
+  font-family: 'Old London';
+  src: url('/assets/fonts/Olondon_.otf') format('opentype'),
+  url('/assets/fonts/OldLondon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
