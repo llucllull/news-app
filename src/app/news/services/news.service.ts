@@ -29,17 +29,9 @@ export class NewsService {
     return this.http.get(url);
   }
 
-  // TODO: get news with user's preferences
-  // params: country, category, sources, q, pagSize, page
-  getNewsByCategories(categories: string[]): Observable<any[]> {
-    const requests = categories.map(category =>
-      this.http.get<{ articles: any[] }>(`${this.apiUrl}/top-headlines?category=${category}&apiKey=${this.apiKey}`).pipe(
-        map(response => response.articles)
-      )
-    );
-
-    return forkJoin(requests).pipe(
-      map(responses => responses.flat()) // Combina todos los artículos de cada respuesta en una sola lista
-    );
+  getNewsByCategory(category: string | null): Observable<any> {
+    const url = `${this.apiUrl}/top-headlines?category=${category}&pageSize=15&apiKey=${this.apiKey}`;
+    return this.http.get<any>(url);
   }
+
 }
