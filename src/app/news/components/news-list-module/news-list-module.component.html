@@ -1,0 +1,18 @@
+<a [href]="newsItem.url" target="_blank">
+  <div class="grid">
+    <div class="left">
+      <span>{{ newsItem.publishedAt | date:'mediumDate' }}</span>
+    </div>
+    <div class="center">
+      <h3>{{ newsItem.title }}</h3>
+      <p>{{ newsItem.description }}</p>
+      <span>{{ newsItem.author }}</span>
+    </div>
+    <div class="right">
+      @if(newsItem.urlToImage){
+        <img [src]="newsItem.urlToImage" alt="{{ newsItem.title }}">
+      }
+    </div>
+  </div>
+</a>
+

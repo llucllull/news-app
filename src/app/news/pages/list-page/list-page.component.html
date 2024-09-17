@@ -1,0 +1,15 @@
+<div class="title-container">
+  <h2>{{ category | titlecase}}</h2>
+  <hr>
+  <p>Latest {{ category }} news</p>
+</div>
+
+<div class="list-container">
+  @if(news && news.length > 0){
+    @for (item of news; track item){
+      <news-list-module [newsItem]="item" />
+    }
+  } @else {
+    <p>No news available</p>
+  }
+</div>
