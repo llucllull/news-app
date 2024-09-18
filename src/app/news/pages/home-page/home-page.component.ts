@@ -14,19 +14,27 @@ import {PreferencesService} from "../../services/preferences.service";
 export class HomePageComponent implements OnInit{
   firstArticle: any[] = [];
   news: any[] = [];
+  data: any[] = [];
   activePreferences: string[] = [];
 
   constructor(private newsService: NewsService, private preferencesService: PreferencesService) {}
 
   ngOnInit() {
     this.newsService.getTopHeadlinesNews().subscribe(data => {
-      this.firstArticle = data.articles[0];
-      this.news = data.articles.slice(1);
+      this.data = data.articles.filter(this.isNewsValid);
+      this.firstArticle = this.data[0];
+      this.news = this.data.slice(1);
     },
     error => console.error('Error fetching news:', error)
     );
     this.preferencesService.preferences$.subscribe(prefs => {
       this.activePreferences = prefs;
     });
+  }
+
+  isNewsValid(newsItem: any): boolean {
+    return !(
+      newsItem.title === '[Removed]'
+    );
   }
 }
