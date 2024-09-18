@@ -31,11 +31,11 @@ export const routes: Routes = [
   },
   {
     path: 'login',
-    loadComponent: () => import('./news/auth/login/login.component').then(m => m.LoginComponent)
+    loadComponent: () => import('./news/pages/auth-page/auth-page.component').then(m => m.AuthPageComponent)
   },
   {
     path: 'register',
-    loadComponent: () => import('./news/auth/register/register.component').then(m => m.RegisterComponent)
+    loadComponent: () => import('./news/pages/auth-page/auth-page.component').then(m => m.AuthPageComponent)
   },
   {
     path: '',

@@ -85,7 +85,7 @@ a {
   text-decoration: underline;
 }
 
-.preferences, .login, .register {
+.preferences, .login, .register, .logout {
   border: 1px solid #3d3d3d;
   background-color: #748cb6;
   color: white;
@@ -101,5 +101,18 @@ a {
 .preference-button a p {
   margin: 0;
   padding: 5px 10px;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.auth-buttons span {
+  margin-right: 10px;
+}
+
+.logout{
+  cursor: pointer;
 }
 

@@ -1,1 +1,26 @@
-<p>register works!</p>
+<form class="auth-form" (ngSubmit)="onRegister()">
+  <div>
+    <label for="email">Email address</label>
+    <input [(ngModel)]="email" type="email" id="email" name="email" placeholder="Your email">
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input [(ngModel)]="password" type="password" id="password" name="password" placeholder="Password">
+  </div>
+
+  <div>
+    <label for="confirm-password">Confirm Password</label>
+    <input [(ngModel)]="confirmPassword" type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password">
+  </div>
+
+  <button type="submit" class="signin-btn">Register</button>
+
+  @if(errorMessage) {
+    <div style="color:red;">
+      {{ errorMessage }}
+    </div>
+  }
+</form>
+
+

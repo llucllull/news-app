@@ -1,0 +1,22 @@
+<div class="auth-container">
+  <a href="/news">
+    <div class="auth-header">
+      <h1 class="title">The News App</h1>
+    </div>
+  </a>
+
+  <div class="auth-toggle">
+    <button (click)="authModeService.setLoginMode(true)" [class.active]="(isLoginMode$ | async)">Sign up</button>
+    <button (click)="authModeService.setLoginMode(false)" [class.active]="!(isLoginMode$ | async)">Register</button>
+  </div>
+
+  @if (isLoginMode$ | async) {
+    <div>
+      <login></login>
+    </div>
+  } @else {
+    <div>
+      <register></register>
+    </div>
+  }
+</div>

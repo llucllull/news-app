@@ -5,14 +5,21 @@
         <p class="preferences">PREFERENCIAS</p>
       </a>
     </div>
-    <div class="auth-buttons">
-      <a href="/login">
-        <p class="login">LOGIN</p>
-      </a>
-      <a href="/register">
-        <p class="register">REGISTER</p>
-      </a>
-    </div>
+    @if(!(user$ | async)){
+      <div class="auth-buttons">
+        <a href="/login" (click)="setLoginMode()">
+          <p class="login">LOG IN</p>
+        </a>
+        <a href="/register" (click)="setRegisterMode()">
+          <p class="register">REGISTER</p>
+        </a>
+      </div>
+    } @else {
+      <div class="auth-buttons">
+        <span>{{ (user$ | async)?.email }}</span>
+        <button class="logout" (click)="onLogout()">LOG OUT</button>
+      </div>
+    }
   </div>
   <div class="second-row-container">
     <span class="date-container">{{ currentDate | date:'fullDate' }}</span>

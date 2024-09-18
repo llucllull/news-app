@@ -1,0 +1,26 @@
+.auth-form {
+  margin-top: 1rem;
+}
+
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button.signin-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.signin-btn:hover {
+  background-color: #333;
+}
