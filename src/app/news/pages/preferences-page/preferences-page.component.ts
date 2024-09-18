@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PreferencesService} from "../../services/preferences.service";
 
 @Component({
@@ -10,7 +10,7 @@ import {PreferencesService} from "../../services/preferences.service";
 })
 export class PreferencesPageComponent {
 
-  preferences = ['General', 'Health', 'Science', 'Business', 'Technology', 'Sports', 'Entertainment'];
+  preferences: string[] = ['General', 'Health', 'Science', 'Business', 'Technology', 'Sports', 'Entertainment'];
   activePreferences: string[] = [];
 
   constructor(private preferencesService: PreferencesService) {

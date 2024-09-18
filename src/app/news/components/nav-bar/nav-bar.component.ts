@@ -27,6 +27,14 @@ export class NavBarComponent implements OnInit{
       this.activePreferences = prefs;
     });
     this.user$ = authState(this.auth);
+
+    this.user$.subscribe(user => {
+      if (user) {
+        this.preferencesService.loadPreferencesFromFirebase(user.uid);
+      } else {
+        this.preferencesService.loadPreferences();
+      }
+    });
   }
 
   goToCategory(category: string) {
